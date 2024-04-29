@@ -1,0 +1,6 @@
+Flask 
+Flask-Cors
+PyPDF2
+numpy
+nltk
+Gunicorn
