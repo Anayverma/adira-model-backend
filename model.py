@@ -7,31 +7,31 @@ import os
 import json
 
 
-def combine_pdfs(pdf_files):
-    combined_text = ""
-    for file_path in pdf_files:
-        with open(file_path, 'rb') as file:
-            pdf_reader = pdf.PdfReader(file)
-            for page in pdf_reader.pages:
-                text = page.extract_text()
-                combined_text += text
-    return combined_text
+# def combine_pdfs(pdf_files):
+#     combined_text = ""
+#     for file_path in pdf_files:
+#         with open(file_path, 'rb') as file:
+#             pdf_reader = pdf.PdfReader(file)
+#             for page in pdf_reader.pages:
+#                 text = page.extract_text()
+#                 combined_text += text
+#     return combined_text
 
 def adira(sentence):
-    pdf_files = [
-        "acts.pdf",
-        "SexualHarassmentofWomenatWorkPlaceAct2013_0.pdf",
-        "The_Criminal_Law_Amendment_Act_2013_0.pdf",
-        "TheCommissionofSatiPreventionAct1987-of1988_0.pdf",
-        "THEDOWRYPROHIBITIONACT1961_0.pdf",
-        "THEIMMORALTRAFFIC(PREVENTION)ACT1956_2.pdf",
-        "TheIndecentRepresentationofWomenProhibitionAct1986_2.pdf",
-        "TheProtectionofWomenfromDomesticViolenceAct2005_0.pdf"
-    ]
-    combined_text = combine_pdfs(pdf_files)
-    output_text_path = "combined_text.txt"
-    with open(output_text_path, "w") as output_file:
-        output_file.write(combined_text)
+    # pdf_files = [
+    #     "acts.pdf",
+    #     "SexualHarassmentofWomenatWorkPlaceAct2013_0.pdf",
+    #     "The_Criminal_Law_Amendment_Act_2013_0.pdf",
+    #     "TheCommissionofSatiPreventionAct1987-of1988_0.pdf",
+    #     "THEDOWRYPROHIBITIONACT1961_0.pdf",
+    #     "THEIMMORALTRAFFIC(PREVENTION)ACT1956_2.pdf",
+    #     "TheIndecentRepresentationofWomenProhibitionAct1986_2.pdf",
+    #     "TheProtectionofWomenfromDomesticViolenceAct2005_0.pdf"
+    # ]
+    # combined_text = combine_pdfs(pdf_files)
+    # output_text_path = "combined_text.txt"
+    # with open(output_text_path, "w") as output_file:
+    #     output_file.write(combined_text)
 
     f = open('combined_text.txt')
     raw_doc = f.read()
