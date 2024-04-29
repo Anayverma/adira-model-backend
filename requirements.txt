@@ -4,3 +4,4 @@ PyPDF2
 numpy
 nltk
 Gunicorn
+scikit-learn
